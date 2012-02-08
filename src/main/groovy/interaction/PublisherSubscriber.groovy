@@ -13,7 +13,7 @@ class Publisher {
         for (subscriber in subscribers) {
             try {
                 subscriber.receive(message)
-            } catch (Exception ignored) {
+            } catch (Exception e) {
                 blackList << subscriber
             }
         }

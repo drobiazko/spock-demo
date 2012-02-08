@@ -43,7 +43,7 @@ class PublisherSubscriberSpec extends Specification {
         pub.publish("msg")
 
         then:
-        1 * sub1.receive("msg") >> { throw new Exception() }
+        1 * sub1.receive("msg") >> { throw new RuntimeException() }
         1 * sub2.receive("msg")
 
         expect:

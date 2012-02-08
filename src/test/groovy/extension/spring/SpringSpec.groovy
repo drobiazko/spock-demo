@@ -25,7 +25,7 @@ class SpringSpec extends Specification {
 
     def "access beans from application context"() {
         when:
-        def greeter = applicationContext.getBean("Greeter", Greeter)
+        def greeter = applicationContext.getBean("greeter", Greeter)
 
         and:
         def greeting = greeter.greet("Spock")
